@@ -81,7 +81,7 @@ def App():
         'Upload File',
         accept='image/*',
         multiple=True
-    )
+    ) 
 
     # Get the uploaded image data (if any)
     image_data = None
