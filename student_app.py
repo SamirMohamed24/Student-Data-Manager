@@ -13,7 +13,7 @@ def insert_student_to_db(data, image_data):
         connection = psycopg2.connect(
             dbname="postgres",
             user="altoum",
-            password="Abosamra10",
+            password="$password$",
             host="pgdatabasetest.postgres.database.azure.com",
             port=5432,
             sslmode="require"
