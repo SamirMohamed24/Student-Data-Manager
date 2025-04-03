@@ -7,7 +7,7 @@ from pywebio.pin import *
 
 def insert_student_to_db(data, image_data):
     #It need remove after stablish connection:
-    connection = None
+    connection = None 
     try:
         # Connect to the PostgreSQL database
         connection = psycopg2.connect(
