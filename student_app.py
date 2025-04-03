@@ -6,6 +6,8 @@ from pywebio.session import *
 from pywebio.pin import *
 
 def insert_student_to_db(data, image_data):
+    #It need remove after stablish connection:
+    connection = None
     try:
         # Connect to the PostgreSQL database
         connection = psycopg2.connect(
@@ -70,7 +72,7 @@ def App():
             input('Email', name='Email'),
             input('Phone number', name='phone', type=NUMBER),
             radio('File format', options=['word', 'excel', 'Powepoint'], name='Certi'),
-            checkbox('language', options=['Swedish', 'English','Arabic','French'], inline=True, name='language')
+            checkbox('language', options=['Swedish', 'English','French'], inline=True, name='language')
         ]
     )
 
