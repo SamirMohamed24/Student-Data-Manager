@@ -1,35 +1,34 @@
+# Final Project – Containerized Python App with PostgreSQL and CI/CD on Azure
 
-# Examensarbete – Containeriserad Python-applikation med PostgreSQL och CI/CD i Azure
+This project was developed as part of my vocational education in Cloud and Virtualization at Campus Mölndal (2025).  
+It demonstrates how to build, deploy, and manage a containerized Python application connected to a PostgreSQL database using modern DevOps tools.
 
-Detta projekt utvecklades som en del av min yrkeshögskoleutbildning inom moln- och virtualisering vid Campus Mölndal (2025).  
-Syftet är att visa hur man bygger, distribuerar och hanterar en containeriserad Python-applikation som är kopplad till en PostgreSQL-databas med moderna DevOps-verktyg.
-
-## 🔧 Använda tekniker
+## 🔧 Technologies Used
 
 - **Python**  
 - **PostgreSQL**  
 - **Docker**  
 - **Azure DevOps (Pipelines)**  
 - **Azure App Service**  
-- **psycopg2** (PostgreSQL-klient för Python)
+- **psycopg2** (PostgreSQL client library for Python)
 
-## 📦 Projektöversikt
+## 📦 Project Overview
 
-Applikationen:
-- Ansluter till en PostgreSQL-databas för att hämta och lagra strukturerad data
-- Validerar indata och hanterar grundläggande CRUD-operationer
-- Paketeras i en Docker-container för portabilitet
-- Distribueras via en CI/CD-pipeline med Azure DevOps till Azure App Service
+The application:
+- Connects to a PostgreSQL database to fetch and store structured data
+- Validates input and handles basic CRUD operations
+- Is packaged in a Docker container for portability
+- Is deployed via CI/CD pipeline using Azure DevOps to an Azure App Service
 
-## 🛠 Funktioner
+## 🛠 Features
 
-- Automatiserad build och deployment med Azure DevOps
-- Containerbaserad drift med Docker
-- Realtidskommunikation med PostgreSQL
-- Tillgänglig via webbläsare
-- Enkel loggning och felhantering
+- Automated build and deployment with Azure DevOps
+- Containerized environment using Docker
+- Real-time interaction with PostgreSQL database
+- Accessible via web browser
+- Clear logging and basic error handling
 
-## 🚀 Så här kör du lokalt
+## 🚀 How to Run Locally
 
 ```bash
 git clone https://github.com/SamirMohamed24/Student-Data-Manager.git
@@ -44,3 +43,12 @@ docker run -e DB_USER=admin -e DB_PASSWORD=dittlösenord -p 5000:5000 python-app
   ├── requirements.txt
   ├── Dockerfile
   └── README.md
+
+📁 Folder Structure
+
+/app
+  ├── main.py
+  ├── requirements.txt
+  ├── Dockerfile
+  └── README.md
+
