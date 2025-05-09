@@ -37,18 +37,60 @@ docker build -t python-app .
 docker run -e DB_USER=admin -e DB_PASSWORD=dittlösenord -p 5000:5000 python-app
 
 
-📁 Projektstruktur
-/app
-  ├── main.py
-  ├── requirements.txt
-  ├── Dockerfile
-  └── README.md
-
 📁 Folder Structure
 
-/app
-  ├── main.py
-  ├── requirements.txt
-  ├── Dockerfile
-  └── README.md
+
+├── app_files/
+│   ├── student_app.py
+│   └── student_image.jpg
+├── requirements.txt
+├── Dockerfile
+└── README.md
+
+🐳 Docker Commands
+
+# Build Docker image
+docker build -t <your-dockerhub-username>/<your-image-name> .
+
+# Push to Docker Hub
+docker push <your-dockerhub-username>/<your-image-name>
+🚀 Azure DevOps Pipelines
+Build Pipeline: Automates building and pushing the Docker image.
+
+Release Pipeline: Pulls from Docker Hub and deploys to Azure App Service.
+
+Stages: Includes release, restart of app service, and smoke testing.
+
+🧪 App Features
+Web form to input:
+
+Name, address, email, phone
+
+File format (radio buttons)
+
+Languages (checkboxes)
+
+File upload (saved as binary)
+
+Data saved to PostgreSQL
+
+🗄️ Database Schema (PostgreSQL)
+
+
+CREATE TABLE students (
+  id SERIAL PRIMARY KEY,
+  name TEXT,
+  address TEXT,
+  email TEXT,
+  phone BIGINT,
+  certificate TEXT,
+  languages TEXT,
+  image BYTEA
+);
+
+🧠 Author
+Samir Mohamed
+
+
+
 
